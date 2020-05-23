@@ -2,8 +2,6 @@
 import unittest
 from t30_1a import function
 
-from math import log
-
 
 class TestFunction(unittest.TestCase): # Клас для тестів
 
