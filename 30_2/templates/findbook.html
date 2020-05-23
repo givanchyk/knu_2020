@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search for books</title>
+</head>
+<body>
+  <h1>Search for books</h1>
+  <form method="POST" action="/">
+    <br>
+    author
+    <br>
+    <input type="text" name="author" value="">
+    <br>
+    name
+    <br>
+     <input type="text" name="name" value="">
+        <br>
+    year
+    <br>
+     <input type="text" name="year" value="">
+    <br>
+    <input type="submit" value="search">
+    <br>
+    {books}
+  </form>
+<form method="POST" action="/add">
+  <br>
+   <input type="submit" value="add a book">
+</form>
+</body>
+</html>

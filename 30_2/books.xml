@@ -1,0 +1,12 @@
+<data>
+    <book>
+        <author>Автор1</author>
+        <name>Назва1</name>
+        <year>2044</year>
+    </book>
+    <book>
+        <author>Автор2</author>
+        <name>Назва2</name>
+        <year>2000</year>
+    </book>
+<book><author>NAME</author><name>AUTH</name><year>173289479</year></book></data>
