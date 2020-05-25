@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Кадри</title>
+</head>
+<body>
+  <h1>Створення наказів</h1>
+<form method="POST" action="/">
+<br>
+      <input type="submit" value="Робітники">
+</form>
+<form method="POST" action="/unit">
+<br>
+      <input type="submit" value="Підрозділи">
+</form>
+<form method="POST" action="/position">
+<br>
+      <input type="submit" value="Посади">
+</form>
+<form method="POST" action="/order">
+<br>
+      <input type="text" name="name1" placeholder="ПІБ" value="">
+      <input type="text" name="age1" placeholder="Рік народження" value="">
+      <input type="text" name="address1" placeholder="Адреса" value="">
+      <input type="text" name="unit1" placeholder="Підрозділ" value="">
+      <input type="text" name="position1" placeholder="Посада" value="">
+      <input type="submit" value="Наказ про прийняття робітника">
+</form>
+<form method="POST" action="/order">
+<br>
+      <input type="text" name="name2" placeholder="ПІБ" value="">
+      <input type="text" name="unit2" placeholder="Підрозділ" value="">
+      <input type="text" name="position2" placeholder="Посада" value="">
+      <input type="submit" value="Наказ про переведення робітника">
+</form>
+<form method="POST" action="/order">
+<br>
+      <input type="text" name="name3" placeholder="ПІБ" value="">
+      <input type="submit" value="Наказ про звільнення">
+</form>
+{add}
+</body>
+</html>
