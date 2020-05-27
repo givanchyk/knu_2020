@@ -168,8 +168,14 @@ def application(environ, start_response):
         position2 = form.getfirst("position2", "")
         name4 = form.getfirst("name4", "")
         if name1:
-            add_employee(name1, age1, address1, unit1, position1)
-            s = 'Робітника додано'
+            if is_employee(name1):
+                s = 'Робітник вже є в базі даних'
+            else:
+                if is_unit(unit1) and is_position(position1):
+                    add_employee(name1, age1, address1, unit1, position1)
+                    s = 'Робітника додано'
+                else:
+                    s = 'Даних посади або підрозділа не існує'
         elif name2:
             if is_employee(name2):
                 edit_employee(name3, age2, address2, unit2, position2, name2)
@@ -195,8 +201,11 @@ def application(environ, start_response):
         count2 = form.getfirst("count2", "")
         name4 = form.getfirst("name4", "")
         if name1:
-            add_unit(name1, count1)
-            s = 'Підрозділ додано'
+            if is_unit(name1):
+                s = 'Підрозділ вже є в базі даних'
+            else:
+                add_unit(name1, count1)
+                s = 'Підрозділ додано'
         elif name2:
             if is_unit(name2):
                 edit_unit(name3, count2, name2)
@@ -220,8 +229,11 @@ def application(environ, start_response):
         name3 = form.getfirst("name3", "")
         name4 = form.getfirst("name4", "")
         if name1:
-            add_position(name1)
-            s = 'Посаду додано'
+            if is_position(name1):
+                s = 'Посада вже є в базі даних'
+            else:
+                add_position(name1)
+                s = 'Посаду додано'
         elif name2:
             if is_position(name2):
                 edit_position(name3, name2)
